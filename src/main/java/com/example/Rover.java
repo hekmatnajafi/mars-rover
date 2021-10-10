@@ -49,26 +49,31 @@ public class Rover {
             break;
         }
     }
-    public void Move(){
+    public void Move(int w, int h){
+        
         switch(direction){
             case "N":
-                y++;
+                if(y < h)
+                    y++;
                 break;
             case "E":
-                x++;
+                if(x<w)
+                    x++;
                 break;
             case "S":
-                y--;
+                if(y>0)
+                    y--;
                 break;
             case "W":
-                x--;
+                if(x>0)
+                    x--;
                 break;
             default:
             break;
         }
     }
 
-    public void GoTo(String instructions)
+    public void GoTo(String instructions, int w, int h)
     {
         char[] ins = instructions.toCharArray();
         for(int i =0; i< ins.length; i++)
@@ -76,7 +81,7 @@ public class Rover {
             switch(ins[i])
             {
                 case 'M':
-                    Move();
+                    Move(w, h);
                     break;
                 case 'R':
                     TurnRight();

@@ -30,7 +30,7 @@ public class AppTest
     public void Move()
     {
         Rover rover = new Rover("1 2 N");
-        rover.Move();
+        rover.Move(5,5);
         System.out.println(rover.direction);
         assertEquals(3, rover.y);
     }
@@ -40,7 +40,7 @@ public class AppTest
      public void GoTo()
      {
          Rover rover = new Rover("1 2 N");
-         rover.GoTo("LMLMLMLMM");
+         rover.GoTo("LMLMLMLMM", 5, 5);
          assertEquals("1 3 N", rover.getResult());
      }
 }
