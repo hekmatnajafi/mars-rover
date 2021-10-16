@@ -1,47 +1,54 @@
 package com.example;
 
-import java.util.Scanner;
 import java.util.Vector;
+import java.nio.file.*;
 
 public class App 
 {
-    public static void main( String[] args )
+    // Reading input file from input.txt file
+    public static String readFile()throws Exception
     {
+      String path = "/var/www/react/projects/Browze/demo/src/main/java/com/example/input.txt";
+      return new String(Files.readAllBytes(Paths.get(path)));
+    }
+    public static void main( String[] args )throws Exception
+    {
+        // Getting file data in main
+        String input = App.readFile();
+
+
         Vector<String> result = new Vector<String>();   
-        Scanner inp = new Scanner(System.in);
         int w;
         int h;
-        System.out.print("Plateau: ");
-        String platua = inp.nextLine();
+        
+        // Storing/splitting data into array based on new line
+        String[] file = input.split("\\R");
+
+        // extracting the Height and width of Platua
+        String platua = file[0].split(":")[1];
         String[] data = platua.split(" ");
         w = Integer.parseInt(data[0]);
         h = Integer.parseInt(data[1]);
         String coordinates;
         String instructions;
-        int number = 1;
-        while(true)
+
+        // Calculation and movement for every Rover
+        for(int i =1; i<file.length; i+=2)
         {
-            System.out.print("Rover"+number+" Landing: ");
-            coordinates = inp.nextLine();
+            // storing the coordinates and instructions of River i
+            coordinates = file[i].split(":")[1];
+            instructions = file[i+1].split(":")[1];
 
-            // stop the loop if the input is empty
-            if(coordinates == "")
-            {
-                break;
-            }
-            System.out.print("Rover"+number+" Instructions: ");
-            instructions = inp.nextLine();
+            // passing the coordinate and instructions to Rover to move
             Rover rover = new Rover(coordinates);
-            rover.GoTo(instructions, w, h);
+            rover.goTo(instructions, w, h);
             result.add(rover.getResult());
-
-            number++;
         }
 
-        // printing the result
+        // Printing the result
         for(int i = 0; i< result.size(); i++)
             {
-                System.out.println(result.get(i));
+                System.out.println("Rover"+(i+1)+":"+result.get(i));
             }
     }
 }

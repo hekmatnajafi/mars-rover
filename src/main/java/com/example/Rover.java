@@ -13,7 +13,7 @@ public class Rover {
         direction = data[2];
         
     }
-    public void TurnRight(){
+    public void turnRight(){
         switch(direction){
             case "N":
                 direction = "E";
@@ -31,7 +31,7 @@ public class Rover {
             break;
         }
     }
-    public void TurnLeft(){
+    public void turnLeft(){
         switch(direction){
             case "N":
                 direction = "W";
@@ -49,7 +49,7 @@ public class Rover {
             break;
         }
     }
-    public void Move(int w, int h){
+    public void move(int w, int h){
         
         switch(direction){
             case "N":
@@ -73,7 +73,7 @@ public class Rover {
         }
     }
 
-    public void GoTo(String instructions, int w, int h)
+    public void goTo(String instructions, int w, int h)
     {
         char[] ins = instructions.toCharArray();
         for(int i =0; i< ins.length; i++)
@@ -81,13 +81,13 @@ public class Rover {
             switch(ins[i])
             {
                 case 'M':
-                    Move(w, h);
+                    move(w, h);
                     break;
                 case 'R':
-                    TurnRight();
+                    turnRight();
                     break;
                 case 'L':
-                    TurnLeft();
+                    turnLeft();
                     break;
                 default:
                     break;
