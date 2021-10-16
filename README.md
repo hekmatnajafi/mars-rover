@@ -43,7 +43,7 @@ This solution is implemented by Java Programming language and created by Maven t
 
 I used Visual Studio Code as IDE and JRE >= 11
 
-# How to run:
+### How to run:
 
 I used visual Visual Studio Code as my IDE
 1. Install the extension called ```Extension Pack for Java``` in VSCode
@@ -55,10 +55,10 @@ Note: by running the project, the extension will add the related files and make 
 
 
 ## Testing
-You can test the project output by running the test file which is inside ```/stc/test/java/com/example directory
-After opening the file, there are 4 methods/functions to test every action of of the project, please pass the needed test cases to the method and the the result.
+You can test the project output by running the test file which is inside ```/stc/test/java/com/example``` directory.
+After opening the file, there are 4 methods/functions to test every action of of the project, please pass the needed test cases to the method and get the the result.
 
-# There are two ways to run the tests:
+### There are two ways to run the tests:
 1. The IDE will create the ```Run Test | Debug Test``` buttons on the top of every test functions which you can just click and run it
 2. On the left side nav of IDE, you can click on ```Test``` icon (added by extension pack) and run the specific test you want or just run all the tests at once
 
