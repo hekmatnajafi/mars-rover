@@ -36,3 +36,30 @@ Expected Output:
 Rover1:1 3 N
 Rover2:5 1 E
 ```
+
+## How it Works:
+
+This solution is implemented by Java Programming language and created by Maven tool
+
+I used Visual Studio Code as IDE and JRE >= 11
+
+# How to run:
+
+I used visual Visual Studio Code as my IDE
+1. Install the extension called ```Extension Pack for Java``` in VSCode
+2. Clone the project by running the command ```git clone git@github.com:hekmatnajafi/mars-rover.git```
+4. Go to the directory called ```mars-rover``` which is created after you cloned the project
+3. On top left menu of IDE, click on Run -> Run without debugging
+
+Note: by running the project, the extension will add the related files and make it ready for building and run
+
+
+## Testing
+You can test the project output by running the test file which is inside ```/stc/test/java/com/example directory
+After opening the file, there are 4 methods/functions to test every action of of the project, please pass the needed test cases to the method and the the result.
+
+# There are two ways to run the tests:
+1. The IDE will create the ```Run Test | Debug Test``` buttons on the top of every test functions which you can just click and run it
+2. On the left side nav of IDE, you can click on ```Test``` icon (added by extension pack) and run the specific test you want or just run all the tests at once
+
+Note: generally the test result will be showed in new tap in right side of IDE, but if it does not displayed, please go to the IDE settings (click on setting icon if bottom left side of IDE) and search for ```exlude``` word, a list will be showed, please remove the ```./classpath``` and ```./project``` from that list and run the test again.
