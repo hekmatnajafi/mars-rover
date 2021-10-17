@@ -49,7 +49,9 @@ I used visual Visual Studio Code as my IDE
 1. Install the extension called ```Extension Pack for Java``` in VSCode
 2. Clone the project by running the command ```git clone git@github.com:hekmatnajafi/mars-rover.git```
 4. Go to the directory called ```mars-rover``` which is created after you cloned the project
-3. On top left menu of IDE, click on Run -> Run without debugging
+5. On top left menu of IDE, click on Run -> Run without debugging
+6. after running the project, the command line window will be showed up and will request you to enter the needed data (plateau, coordinates, and instructions).
+7. Plateau will be asked once on every run of the project, but you can enter the coordinates and instructions for any number of rovers you want, and when you wanted to display the results and terminate the program, please enter an empty line as the coordinates of new rover. 
 
 Note: by running the project, the extension will add the related files and make it ready for building and run
 
