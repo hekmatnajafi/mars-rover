@@ -15,37 +15,38 @@ public class App
     }
     public static void main( String[] args )throws Exception
     {
+        // Getting file data in main
+        String input = App.readFile();
+
+
         Vector<String> result = new Vector<String>();   
         int w;
         int h;
+        
+        // Storing/splitting data into array based on new line
+        String[] file = input.split("\\R");
+
         // extracting the Height and width of Platua
-        Scanner inp = new Scanner(System.in);
-        System.out.print("Plateau:");
-        String platua = inp.nextLine();
+        String platua = file[0].split(":")[1];
         String[] data = platua.split(" ");
         w = Integer.parseInt(data[0]);
         h = Integer.parseInt(data[1]);
         String coordinates;
         String instructions;
-        int number =1;
-        System.out.print("Rover"+number+" Landing:");
-        coordinates = inp.nextLine();
 
-        while(!coordinates.isEmpty())
+        // Calculation and movement for every Rover
+        for(int i =1; i<file.length; i+=2)
         {
-            //  storing the coordinates and instructions of River i
-            System.out.print("Rover"+number+" Instructions:");
-            instructions = inp.nextLine();
+            // storing the coordinates and instructions of River i
+            coordinates = file[i].split(":")[1];
+            instructions = file[i+1].split(":")[1];
+
             // passing the coordinate and instructions to Rover to move
             Rover rover = new Rover(coordinates);
             rover.goTo(instructions, w, h);
             result.add(rover.getResult());
-            number++;
-
-            System.out.print("Rover"+number+" Landing:");
-            coordinates = inp.nextLine();
-
         }
+
         // Printing the result
         for(int i = 0; i< result.size(); i++)
             {
