@@ -60,7 +60,7 @@ You can test the project output by running the test file which is inside ```/stc
 After opening the file, there are 4 methods/functions to test every action of of the project, please pass the needed test cases to the method and get the the result.
 
 ### There are two ways to run the tests:
-1. The IDE will create the ```Run Test | Debug Test``` buttons on the top of every test functions which you can just click and run it
-2. On the left side nav of IDE, you can click on ```Test``` icon (added by extension pack) and run the specific test you want or just run all the tests at once
+1. Use Maven(command Line), make sure you have installed Maven package. open the root folder of project (/mars-rover/) and run ```mvn clean test``` it will show the test(s) results. if its not worked, please run ```mvn clean package``` insdie root folder of project the run again the ```mvn clean test``` command.
+2. The IDE will create the ```Run Test | Debug Test``` buttons on the top of every test functions which you can just click and run it
 
-Note: generally the test result will be showed in new tap in right side of IDE, but if it does not displayed, please go to the IDE settings (click on setting icon if bottom left side of IDE) and search for ```exlude``` word, a list will be showed, please remove the ```./classpath``` and ```./project``` from that list and run the test again.
+Note: if you used the IDE to run the test, generally the test result will be showed in new tap in right side of IDE, but if it does not displayed, please go to the IDE settings (click on setting icon if bottom left side of IDE) and search for ```exlude``` word, a list will be showed, please remove the ```./classpath``` and ```./project``` from that list and run the test again.
