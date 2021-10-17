@@ -49,10 +49,10 @@ I used visual Visual Studio Code as my IDE
 1. Install the extension called ```Extension Pack for Java``` in VSCode
 2. Clone the project by running the command ```git clone git@github.com:hekmatnajafi/mars-rover.git```
 4. Go to the directory called ```mars-rover``` which is created after you cloned the project
-5. On top left menu of IDE, click on Run -> Run without debugging
-6. after running the project, the command line window will be showed up, please enter the path and name of the input file (txt file).
-
-Note: by running the project, the extension will add the related files and make it ready for building and run
+5. In that directory, open command line and enter: ```javac -cp . src/main/java/com/example/App.java```
+6. after the above command, enter ```java src/main/java/com/example/App.java```
+7. now the program is running, please enter the input file path. for example mine is ```src/main/java/com/example/input.txt```
+8. after entering the path, it will read the test cases and will display the results in command line
 
 
 ## Testing
